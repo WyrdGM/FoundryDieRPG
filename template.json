@@ -1,57 +1,114 @@
 {
     "Actor": {
-      "types": ["hero", "pawn", "villain"],
+      "types": ["paragon", "fallen", "npc" ],
       "templates": {
-        "background": {
-          "biography": "",
-          "hairColor": "blue"
+        "base" : {
+        "strength": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.strength",
+          "name": "DIE.strength"
         },
-        "resources": {
-          "health": {
-            "min": 0,
-            "value": 10,
-            "max": 10
-          },
-          "power": {
-            "min": 0,
-            "value": 1,
-            "max": 3
-          }
+        "dexterity": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.dexterity",
+          "name": "DIE.dexterity"
+        },
+        "constitution": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.constitution",
+          "name": "DIE.constitution"
+        },
+        "intelligence": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.intelligence",
+          "name": "DIE.intelligence"
+        },
+        "wisdom": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.wisdom",
+          "name": "DIE.wisdom"
+        },
+        "charisma": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.charisma",
+          "name": "DIE.charisma"
+        },
+        "guard": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.guard",
+          "name": "DIE.guard"
+        },
+        "health": {
+          "value": [2],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.health",
+          "name": "DIE.health"
+        },
+        "willpower": {
+          "value": [4],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.willpower",
+          "name": "DIE.willpower"
+        },
+        "defence": {
+          "value": [0],
+          "max": 9,
+          "max_default": 9,
+          "name_default": "DIE.defence",
+          "name": "DIE.defence"
         }
+      }
       },
-      "hero": {
-        "templates": ["background", "resources"],
-        "goodness": {
-          "value": 5,
-          "max": 10
-        }
+      "fallen": {
+        "templates": ["base"]
       },
-      "pawn": {
-        "templates": ["resources"]
-      },
-      "villain": {
-        "templates": ["background", "resources"],
-        "wickedness": {
-          "value": 5,
-          "max": 100
-        }
+      "npc": {
+        "templates": ["base"]
       }
     },
     "Item": {
-      "types": ["weapon", "spell"],
+      "types": ["weapon", "spell", "armour"],
       "templates": {
-        "rarity": {
-          "rarity": "Common",
-          "price": 20
+        "special": {
+          "special": "Special Text"
         }
       },
       "weapon": {
-        "templates": ["rarity"],
+        "templates": ["special"],
         "damage": 5
       },
       "spell": {
-        "templates": ["rarity"],
-        "cost": 2
+        "templates": ["special"],
+        "risk": {
+          "value": [5],
+          "max": 50,
+          "max_default": 50,
+          "name_default": "DIE.risk",
+          "name": "DIE.risk"
+        },
+        "rules" : "Basic Rules"
+      },
+      "armour": {
+        "templates": ["special"],
+        "defence": {
+          "value": 0
+        } 
       }
     }
     }
