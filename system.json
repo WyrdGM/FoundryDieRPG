@@ -34,5 +34,6 @@
     "secondaryTokenAttribute": "DIE.health",
     "url": "https://github.com/WyrdGM/FoundryDieRPG",
     "background": "systems/mysystem/assets/splash.webp",
-    "manifest": "https://github.com/WyrdGM/FoundryDieRPG/system.json"
+    "manifest": "https://github.com/WyrdGM/FoundryDieRPG/system.json",
+    "download" : "https://github.com/wyrdgm/FoundryDieRPG/releases/download/0.1/DIE-RPG-0.1.zip"
   }
